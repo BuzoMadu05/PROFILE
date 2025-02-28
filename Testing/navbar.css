@@ -1,0 +1,70 @@
+/* style.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    color: #d32a2a;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  /* Navigation Menu */
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  /* Hamburger Menu Icon */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+  }
+  
+  /* Responsive Rules */
+  @media (max-width: 768px) {
+    /* Show hamburger icon */
+    .menu-icon {
+      display: block;
+    }
+    
+    /* Stack navigation vertically and hide by default */
+    header nav ul {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+    }
+    
+    /* When active, display the menu */
+    header nav ul.active {
+      display: block;
+    }
+    
+    header nav ul li {
+      text-align: center;
+      border-top: 1px solid #444;
+    }
+  }
+  
